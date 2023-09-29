@@ -18,21 +18,35 @@ const CustomDataTAble = () => {
 
     const data = [
         {
-            title: "name",
-            value: "pallab"
+            name: "pallab",
+            email: "pallab1@gmail.com",
+            age: 27
         },
         {
-            title: "email",
-            value: "pallab@gmail.com"
+            name: "pallab 2",
+            email: "pallab2@gmail.com",
+            age: 30
         },
         {
-            title: "age",
-            value: "26"
+            name: "pallab 3",
+            email: "pallab3@gmail.com",
+            age: 42
         },
     ]
 
     return (
-        <div className='container'>
+        <div className='container mt-5'>
+
+            <div className="form-group d-flex justify-content-end">
+                <input
+                    type="email"
+                    className="form-control w-25"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp"
+                    placeholder="Enter email"
+                />
+            </div>
+
             <table className="table">
                 <thead>
                     <tr>
@@ -44,7 +58,7 @@ const CustomDataTAble = () => {
                 </thead>
                 <tbody>
                     {columns.map((col, i) =>
-                        <tr>
+                        <tr key={i}>
                             {
                                 data.map((row, i) =>
                                     <th scope="row" key={i}>{row.value}</th>
