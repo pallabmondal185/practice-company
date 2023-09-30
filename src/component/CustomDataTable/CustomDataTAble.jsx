@@ -3,6 +3,10 @@ import React from 'react'
 const CustomDataTAble = () => {
     const columns = [
         {
+            name: "SL",
+            title: "sl"
+        },
+        {
             name: "Name",
             title: "name"
         },
@@ -16,22 +20,31 @@ const CustomDataTAble = () => {
         },
     ]
 
-    const data = [
+    const rows = [
         {
             name: "pallab",
             email: "pallab1@gmail.com",
-            age: 27
+            age: 27,
+            sl: 1
         },
         {
             name: "pallab 2",
             email: "pallab2@gmail.com",
-            age: 30
+            age: 30,
+            sl: 2
         },
         {
             name: "pallab 3",
             email: "pallab3@gmail.com",
-            age: 42
+            age: 42,
+            sl: 3
         },
+        {
+            name: "pallab 4",
+            email: "pallab3@gmail.com",
+            age: 42,
+            sl: 4
+        }
     ]
 
     return (
@@ -57,11 +70,11 @@ const CustomDataTAble = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {columns.map((col, i) =>
+                    {rows.map((row, i) =>
                         <tr key={i}>
                             {
-                                data.map((row, i) =>
-                                    <th scope="row" key={i}>{row.value}</th>
+                                columns.map((col, i) =>
+                                    <th scope="row" key={i}>{row[col.title]}</th>
                                 )
                             }
                         </tr>

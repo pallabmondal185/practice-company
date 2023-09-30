@@ -1,0 +1,7 @@
+.paginate-li {
+    display: inline;
+    margin: 1px;
+    padding: 6px 12px;
+    cursor: pointer;
+    background: #858181bf;
+}
