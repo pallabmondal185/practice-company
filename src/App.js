@@ -1,16 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
 import FormicEg from './component/formic/FormicEg';
-import CustomDataTAble from './component/CustomDataTable/CustomDataTAble';
+import CustomDataTAble from './component/DataTableCustom/CustomDataTAble';
 import EventBubling from './component/eventBubling/EventBubling';
-import ReactPagination from './component/ReactPAgination/ReactPagination';
+import ReactPagination from './component/PaginationCustom/ReactPagination';
 
 function App() {
   return (
     <div className="App">
       {/* <FormicEg /> */}
       <CustomDataTAble />
-      <ReactPagination />
+      {/* <ReactPagination /> */}
       {/* <EventBubling /> */}
     </div>
   );
