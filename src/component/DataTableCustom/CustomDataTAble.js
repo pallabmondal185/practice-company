@@ -6,7 +6,7 @@ const CustomDataTAble = (props) => {
         noOfItemsPerPage = 10,
         columns = [],
         rows = [],
-        isSearchDefault = false,
+        isSearchDefault = true,
         searchWithApi = false,
         handleApiAearch
     } = props;
@@ -55,7 +55,7 @@ const CustomDataTAble = (props) => {
 
             {/* search input */}
             <div className="form-group d-flex justify-content-end">
-                {isSearchDefault &&
+                {searchWithApi &&
                     // api search
                     <input
                         type="text"
@@ -67,7 +67,7 @@ const CustomDataTAble = (props) => {
                     />
                 }
 
-                {searchWithApi &&
+                {isSearchDefault &&
                     // default search
                     <input
                         type="text"
