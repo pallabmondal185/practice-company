@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 const Counter = () => {
     const [count, setCount] = useState(0);
+    const [clickCount, setClickCount] = useState(10);
 
     useEffect(() => {
         const time = setInterval(() => {
@@ -14,6 +15,15 @@ const Counter = () => {
     return (
         <div>
             count: {count}
+            <button
+                onClick={() => {
+                    // setInterval(() => {
+                    //     setClickCount((prev) => prev - 1)
+                    // }, 1000)
+                }}
+            >
+                {/* Click: {clickCount} */}
+            </button>
         </div>
     )
 }
