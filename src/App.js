@@ -6,15 +6,19 @@ import EventBubling from './component/eventBubling/EventBubling';
 import ReactPagination from './component/PaginationCustom/ReactPagination';
 import DataTable from './component/DataTableCustom/DataTable';
 import Counter from './component/counter/Counter';
+import CalanderEg from './component/Calander/CalanderEg';
+import EventsEg from './component/events/EventsEg';
 
 function App() {
   return (
     <div className="App">
       {/* <FormicEg /> */}
-      <DataTable />
-      <Counter />
+      {/* <DataTable /> */}
+      {/* <Counter /> */}
       {/* <ReactPagination /> */}
       {/* <EventBubling /> */}
+      {/* <CalanderEg /> */}
+      <EventsEg />
     </div>
   );
 }
