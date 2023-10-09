@@ -6,15 +6,17 @@ import EventBubling from './component/eventBubling/EventBubling';
 import ReactPagination from './component/PaginationCustom/ReactPagination';
 import DataTable from './component/DataTableCustom/DataTable';
 import Counter from './component/counter/Counter';
+import Parent from './component/Memo/MemoEg1/Parent';
 
 function App() {
   return (
     <div className="App">
       {/* <FormicEg /> */}
-      <DataTable />
-      <Counter />
+      {/* <DataTable /> */}
+      {/* <Counter /> */}
       {/* <ReactPagination /> */}
       {/* <EventBubling /> */}
+      <Parent />
     </div>
   );
 }
