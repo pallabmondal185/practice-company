@@ -21,4 +21,4 @@ const EventsEg = () => {
     )
 }
 
-export default EventsEg
+export default EventsEg;

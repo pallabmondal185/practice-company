@@ -8,6 +8,7 @@ import DataTable from './component/DataTableCustom/DataTable';
 import Counter from './component/counter/Counter';
 import CalanderEg from './component/Calander/CalanderEg';
 import EventsEg from './component/events/EventsEg';
+import CalenderCustomEg from './component/Calander/CalenderCustomEg';
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
       {/* <ReactPagination /> */}
       {/* <EventBubling /> */}
       {/* <CalanderEg /> */}
-      <EventsEg />
+      <CalenderCustomEg />
+      {/* <EventsEg /> */}
     </div>
   );
 }
