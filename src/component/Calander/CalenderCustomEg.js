@@ -83,43 +83,43 @@ const CalenderCustomEg = () => {
 
         let dateArr = []
         //  creating li of previous month last days
-        for (let i = firstDayOfMonth; i > 0; i--) {
-            dateArr = [
-                ...dateArr,
-                {
-                    day: i,
-                    nonth: currMonth,
-                    year: currYear,
-                    clName: "inactive"
-                }
-            ]
-        }
+        // for (let i = firstDayOfMonth; i > 0; i--) {
+        //     dateArr = [
+        //         ...dateArr,
+        //         {
+        //             day: i,
+        //             nonth: currMonth,
+        //             year: currYear,
+        //             clName: "inactive"
+        //         }
+        //     ]
+        // }
 
         // creating li of all days of current month
-        for (let i = 1; i < lastDateOfMonth; i++) {
-            dateArr = [
-                ...dateArr,
-                {
-                    day: i,
-                    nonth: currMonth,
-                    year: currYear,
-                    clName: "active"
-                }
-            ]
-        }
+        // for (let i = 1; i < lastDateOfMonth; i++) {
+        //     dateArr = [
+        //         ...dateArr,
+        //         {
+        //             day: i,
+        //             nonth: currMonth,
+        //             year: currYear,
+        //             clName: "active"
+        //         }
+        //     ]
+        // }
 
         // passing current mon and yr as currentDate text
-        for (let i = lastDayOfMonth; i < 6; i++) {
-            dateArr = [
-                ...dateArr,
-                {
-                    day: i - lastDayOfMonth + 1,
-                    nonth: currMonth,
-                    year: currYear,
-                    clName: "inactive"
-                }
-            ]
-        }
+        // for (let i = lastDayOfMonth; i < 6; i++) {
+        //     dateArr = [
+        //         ...dateArr,
+        //         {
+        //             day: i - lastDayOfMonth + 1,
+        //             nonth: currMonth,
+        //             year: currYear,
+        //             clName: "inactive"
+        //         }
+        //     ]
+        // }
 
         setDays(dateArr)
         console.log("lastDateOfMonth", lastDateOfMonth)
