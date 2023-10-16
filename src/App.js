@@ -19,8 +19,8 @@ function App() {
       {/* <ReactPagination /> */}
       {/* <EventBubling /> */}
       {/* <Parent /> */}
-      {/* <CalanderEg /> */}
-      <EventsEg />
+      <CalanderEg />
+      {/* <EventsEg /> */}
     </div>
   );
 }
