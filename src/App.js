@@ -9,6 +9,7 @@ import Counter from './component/counter/Counter';
 import Parent from './component/Memo/MemoEg1/Parent';
 import CalanderEg from './component/Calander/CalanderEg';
 import EventsEg from './component/events/EventsEg';
+import CalenderCustomEg from './component/Calander/CalenderCustomEg';
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
       {/* <ReactPagination /> */}
       {/* <EventBubling /> */}
       {/* <Parent /> */}
-      <CalanderEg />
+      {/* <CalanderEg /> */}
+      <CalenderCustomEg />
       {/* <EventsEg /> */}
     </div>
   );
