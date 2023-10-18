@@ -10,6 +10,7 @@ import Parent from './component/Memo/MemoEg1/Parent';
 import CalanderEg from './component/Calander/CalanderEg';
 import EventsEg from './component/events/EventsEg';
 import CalenderCustomEg from './component/Calander/CalenderCustomEg';
+import TextAnimation from './component/textAnimation/TextAnimation';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       {/* <CalanderEg /> */}
       <CalenderCustomEg />
       {/* <EventsEg /> */}
+      {/* <TextAnimation /> */}
     </div>
   );
 }
