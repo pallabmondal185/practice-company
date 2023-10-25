@@ -63,6 +63,7 @@ const CalenderCustomEg = () => {
 
 
     // *********react*************
+
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
     const today = new Date();
@@ -70,8 +71,9 @@ const CalenderCustomEg = () => {
     const [days, setDays] = useState([]);
     const [currMonth, setCurrMonth] = useState(today.getMonth());
     const [currYear, setCurrYear] = useState(today.getFullYear());
+    const [selectedDate, setSelectedDay] = useState(today);
 
-    console.log("days", days)
+    console.log("selectedDaterrr", selectedDate)
 
     // getting all days
     const getAllDaysOfMonth = () => {
@@ -88,8 +90,8 @@ const CalenderCustomEg = () => {
             dateArr = [
                 ...dateArr,
                 {
-                    day: i,
-                    nonth: currMonth,
+                    day: lastDateOfLastMonth - i + 1,
+                    month: currMonth - 1,
                     year: currYear,
                     clName: "inactive"
                 }
@@ -98,13 +100,17 @@ const CalenderCustomEg = () => {
 
         // creating li of all days of current month
         for (let i = 1; i <= lastDateOfMonth; i++) {
+            // adding active class to li if the current day, month, and year matched
+            const isTodayClass = i === today.getDate() && currMonth === today.getMonth()
+                && currYear === today.getFullYear() ? "active" : "";
+
             dateArr = [
                 ...dateArr,
                 {
                     day: i,
-                    nonth: currMonth,
+                    month: currMonth,
                     year: currYear,
-                    clName: ""
+                    clName: isTodayClass
                 }
             ]
         }
@@ -115,7 +121,7 @@ const CalenderCustomEg = () => {
                 ...dateArr,
                 {
                     day: i - lastDayOfMonth + 1,
-                    nonth: currMonth,
+                    month: currMonth + 1,
                     year: currYear,
                     clName: "inactive"
                 }
@@ -126,17 +132,33 @@ const CalenderCustomEg = () => {
 
     //click on left
     const handleLeft = () => {
-        const newCyrrMonth = currMonth - 1;
-        setCurrMonth(newCyrrMonth);
+        const newCurrMonth = currMonth - 1;
+        if (newCurrMonth >= 0) {
+            setCurrMonth(newCurrMonth);
+        } else {
+            setCurrMonth(11);
+            setCurrYear(prev => prev - 1);
+        }
     }
 
     //click on right
     const handleRight = () => {
-        const newCyrrMonth = currMonth - 1;
-        setCurrMonth(newCyrrMonth);
+        const newCurrMonth = currMonth + 1;
+        if (newCurrMonth <= 11) {
+            setCurrMonth(newCurrMonth);
+        } else {
+            setCurrMonth(0);
+            setCurrYear(prev => prev + 1);
+        }
     }
 
-
+    // to select the date on click
+    const handleDateClick = (data) => {
+        const { day, month, year } = data;
+        const date = new Date(year, month, day);
+        console.log("yeardff", year, month, day)
+        setSelectedDay(date);
+    }
 
     useEffect(() => {
         getAllDaysOfMonth();
@@ -147,8 +169,9 @@ const CalenderCustomEg = () => {
             <div className="wrapper">
                 <header>
                     <p className="current-date">
-                        <span>Month: {currMonth}, Year: {currYear}</span>
-                    </p>
+                        <span>Month: {currMonth + 1}, Year: {currYear}</span>
+                    </p><br />
+                    <div>{`${selectedDate.getDate()}-${selectedDate.getMonth() + 1}-${selectedDate.getFullYear()}`}</div>
                     <div className="icons">
                         <span id="prev" className="material-symbols-rounded" onClick={handleLeft}>{`<`}</span>
                         <span id="next" className="material-symbols-rounded" onClick={handleRight}>{`>`}</span>
@@ -167,10 +190,20 @@ const CalenderCustomEg = () => {
                     <ul className="days">
                         {
                             days.map((item, i) => {
+                                const { day, month, year } = item;
+                                const isSelectedClass = day === selectedDate.getDate()
+                                    && month === selectedDate.getMonth()
+                                    && year === selectedDate.getFullYear() ? "selected" : "";
+
+                                // const isSelectedClass = day === selectedDate.getDate()
+                                //     && month === selectedDate.getMonth()
+                                //     && year === selectedDate.getFullYear();
+
                                 return (
                                     <li
                                         key={i}
-                                        className={item?.clName}
+                                        className={item?.clName + " " + isSelectedClass}
+                                        onClick={() => handleDateClick(item)}
                                     >
                                         {item?.day}
                                     </li>
