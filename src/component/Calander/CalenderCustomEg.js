@@ -61,13 +61,13 @@ const CalenderCustomEg = () => {
     // });
 
 
-
     // *********react*************
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
     const today = new Date();
 
     const [days, setDays] = useState([]);
+    const [currDate, setCurrentDate] = useState();
     const [currMonth, setCurrMonth] = useState(today.getMonth());
     const [currYear, setCurrYear] = useState(today.getFullYear());
 
@@ -132,10 +132,9 @@ const CalenderCustomEg = () => {
 
     //click on right
     const handleRight = () => {
-        const newCyrrMonth = currMonth - 1;
-        setCurrMonth(newCyrrMonth);
+        const newCurrMonth = currMonth + 1;
+        setCurrMonth(newCurrMonth);
     }
-
 
 
     useEffect(() => {
@@ -147,7 +146,7 @@ const CalenderCustomEg = () => {
             <div className="wrapper">
                 <header>
                     <p className="current-date">
-                        <span>Month: {currMonth}, Year: {currYear}</span>
+                        <span>{currMonth}, Year: {currYear}</span>
                     </p>
                     <div className="icons">
                         <span id="prev" className="material-symbols-rounded" onClick={handleLeft}>{`<`}</span>
