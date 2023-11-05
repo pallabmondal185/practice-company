@@ -1,10 +1,12 @@
 import React from 'react'
 
-const Child = ({ count }) => {
+const Child = ({ count, addFunction, addCallback }) => {
     console.log("child");
     return (
         <div>
-            count child: {count}
+            <p>count child: {count}</p>
+            {/* <p>count function: {addFunction()}</p> */}
+            <p>count Callback: {addCallback()}</p>
         </div>
     )
 }

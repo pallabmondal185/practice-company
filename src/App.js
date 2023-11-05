@@ -11,6 +11,7 @@ import CalanderEg from './component/Calander/CalanderEg';
 import EventsEg from './component/events/EventsEg';
 import CalenderCustomEg from './component/Calander/CalenderCustomEg';
 import TextAnimation from './component/textAnimation/TextAnimation';
+import UseMemoUseCallback from './component/Memo/UseMemoUseCallbackEg/UseMemoUseCallback';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <CalenderCustomEg />
       {/* <EventsEg /> */}
       {/* <TextAnimation /> */}
+      {/* <UseMemoUseCallback /> */}
     </div>
   );
 }
