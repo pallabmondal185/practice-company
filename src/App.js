@@ -12,6 +12,7 @@ import EventsEg from './component/events/EventsEg';
 import CalenderCustomEg from './component/Calander/CalenderCustomEg';
 import TextAnimation from './component/textAnimation/TextAnimation';
 import UseMemoUseCallback from './component/Memo/UseMemoUseCallbackEg/UseMemoUseCallback';
+import DragAndDop from './component/DragAndDrop/DragAndDop';
 
 function App() {
   return (
@@ -23,10 +24,11 @@ function App() {
       {/* <EventBubling /> */}
       {/* <Parent /> */}
       {/* <CalanderEg /> */}
-      <CalenderCustomEg />
+      {/* <CalenderCustomEg /> */}
       {/* <EventsEg /> */}
       {/* <TextAnimation /> */}
       {/* <UseMemoUseCallback /> */}
+      <DragAndDop />
     </div>
   );
 }
