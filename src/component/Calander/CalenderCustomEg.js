@@ -240,4 +240,4 @@ const CalenderCustomEg = () => {
     )
 }
 
-export default CalenderCustomEg
+export default CalenderCustomEg;

@@ -11,6 +11,8 @@ import CalanderEg from './component/Calander/CalanderEg';
 import EventsEg from './component/events/EventsEg';
 import CalenderCustomEg from './component/Calander/CalenderCustomEg';
 import TextAnimation from './component/textAnimation/TextAnimation';
+import LazyLoadingEg1 from './component/LazyLoading/LazyLoadingEg1';
+import GoogleCalender from './component/GoogleCalander/GoogleCalender';
 
 function App() {
   return (
@@ -22,9 +24,11 @@ function App() {
       {/* <EventBubling /> */}
       {/* <Parent /> */}
       {/* <CalanderEg /> */}
-      <CalenderCustomEg />
+      {/* <CalenderCustomEg /> */}
       {/* <EventsEg /> */}
       {/* <TextAnimation /> */}
+      {/* <LazyLoadingEg1 /> */}
+      <GoogleCalender />
     </div>
   );
 }
