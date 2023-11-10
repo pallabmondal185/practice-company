@@ -13,6 +13,9 @@ import CalenderCustomEg from './component/Calander/CalenderCustomEg';
 import TextAnimation from './component/textAnimation/TextAnimation';
 import LazyLoadingEg1 from './component/LazyLoading/LazyLoadingEg1';
 import GoogleCalender from './component/GoogleCalander/GoogleCalender';
+import UseMemoUseCallback from './component/Memo/UseMemoUseCallbackEg/UseMemoUseCallback';
+import DragAndDop from './component/DragAndDrop/DragAndDop';
+import ReactBeatifulDndEg1 from './component/DragAndDrop/ReactBeautifulDnd/ReactBeatifulDndEg1';
 
 function App() {
   return (
@@ -28,7 +31,10 @@ function App() {
       {/* <EventsEg /> */}
       {/* <TextAnimation /> */}
       {/* <LazyLoadingEg1 /> */}
-      <GoogleCalender />
+      {/* <GoogleCalender /> */}
+      {/* <UseMemoUseCallback /> */}
+      {/* <DragAndDop /> */}
+      <ReactBeatifulDndEg1 />
     </div>
   );
 }
