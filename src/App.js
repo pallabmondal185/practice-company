@@ -15,7 +15,7 @@ import LazyLoadingEg1 from './component/LazyLoading/LazyLoadingEg1';
 import GoogleCalender from './component/GoogleCalander/GoogleCalender';
 import UseMemoUseCallback from './component/Memo/UseMemoUseCallbackEg/UseMemoUseCallback';
 import DragAndDop from './component/DragAndDrop/DragAndDop';
-import ReactBeatifulDndEg1 from './component/DragAndDrop/ReactBeautifulDnd/ReactBeatifulDndEg1';
+import ReactBeautifulDnd from './component/DragAndDrop/ReactBeautifulDnd'
 
 function App() {
   return (
@@ -34,7 +34,7 @@ function App() {
       {/* <GoogleCalender /> */}
       {/* <UseMemoUseCallback /> */}
       {/* <DragAndDop /> */}
-      <ReactBeatifulDndEg1 />
+      <ReactBeautifulDnd />
     </div>
   );
 }

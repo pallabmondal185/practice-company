@@ -35,19 +35,13 @@ const getItemStyle = (isDragging, draggableStyle) => ({
 const getListStyle = isDraggingOver => ({
     background: isDraggingOver ? "lightblue" : "lightgrey",
     padding: grid,
-    width: 250
+    width: 250,
+    // display: "flex",
+    // overflow: "auto"
 });
 
 
 function ReactBeatifulDndEg1() {
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         items: getItems(10)
-    //     };
-    //     this.onDragEnd = this.onDragEnd.bind(this);
-    // }
-
     const [items, setItems] = useState(getItems(10));
 
     const onDragEnd = (result) => {
@@ -63,15 +57,10 @@ function ReactBeatifulDndEg1() {
         );
 
         setItems(itemsNew);
-
-        // this.setState({
-        //     items
-        // });
     }
 
     // Normally you would want to split things out into separate components.
     // But in this example everything is just done in one place for simplicity
-    // render() {
     return (
         <DragDropContext onDragEnd={onDragEnd}>
             <Droppable droppableId="droppable">
