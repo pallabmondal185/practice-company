@@ -14,4 +14,4 @@ const AdjustableSidebar = () => {
     )
 }
 
-export default AdjustableSidebar
+export default AdjustableSidebar;
