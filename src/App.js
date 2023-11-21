@@ -16,6 +16,7 @@ import GoogleCalender from './component/GoogleCalander/GoogleCalender';
 import UseMemoUseCallback from './component/Memo/UseMemoUseCallbackEg/UseMemoUseCallback';
 import DragAndDop from './component/DragAndDrop/DragAndDop';
 import ReactBeautifulDnd from './component/DragAndDrop/ReactBeautifulDnd'
+import AdjustableSidebar from './component/AdjustableSidebar/AdjustableSidebar';
 
 function App() {
   return (
@@ -34,7 +35,8 @@ function App() {
       {/* <GoogleCalender /> */}
       {/* <UseMemoUseCallback /> */}
       {/* <DragAndDop /> */}
-      <ReactBeautifulDnd />
+      {/* <ReactBeautifulDnd /> */}
+      <AdjustableSidebar />
     </div>
   );
 }

@@ -1,0 +1,43 @@
+.clearfix {
+    overflow: auto;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    height: 50px;
+    background: #2196f3;
+}
+
+.sidebar {
+    float: left;
+    width: 400px;
+    height: 100%;
+    background: #ffcdd2;
+    overflow: auto;
+}
+
+.handle {
+    float: left;
+    width: 10px;
+    /* height: calc(~"100% - 50px"); */
+    height: 100%;
+    background: #ddd;
+    cursor: ew-resize;
+}
+
+.content {
+    margin-left: 410px;
+    /* height: calc(~"100% - 50px"); */
+    height: 100%;
+    overflow: auto;
+
+    p {
+        height: 1000px;
+        background: #ce93d8;
+    }
+}
