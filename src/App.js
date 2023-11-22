@@ -17,6 +17,7 @@ import UseMemoUseCallback from './component/Memo/UseMemoUseCallbackEg/UseMemoUse
 import DragAndDop from './component/DragAndDrop/DragAndDop';
 import ReactBeautifulDnd from './component/DragAndDrop/ReactBeautifulDnd'
 import ExcelToArray from './component/ExcelToArray/ExcelToArray';
+import AdjustableSidebar from './component/AdjustableSidebar/AdjustableSidebar';
 
 function App() {
   return (
@@ -36,7 +37,8 @@ function App() {
       {/* <UseMemoUseCallback /> */}
       {/* <DragAndDop /> */}
       {/* <ReactBeautifulDnd /> */}
-      <ExcelToArray />
+      {/* <ExcelToArray /> */}
+      <AdjustableSidebar />
     </div>
   );
 }
