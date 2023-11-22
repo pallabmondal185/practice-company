@@ -16,6 +16,7 @@ import GoogleCalender from './component/GoogleCalander/GoogleCalender';
 import UseMemoUseCallback from './component/Memo/UseMemoUseCallbackEg/UseMemoUseCallback';
 import DragAndDop from './component/DragAndDrop/DragAndDop';
 import ReactBeautifulDnd from './component/DragAndDrop/ReactBeautifulDnd'
+import ExcelToArray from './component/ExcelToArray/ExcelToArray';
 
 function App() {
   return (
@@ -34,7 +35,8 @@ function App() {
       {/* <GoogleCalender /> */}
       {/* <UseMemoUseCallback /> */}
       {/* <DragAndDop /> */}
-      <ReactBeautifulDnd />
+      {/* <ReactBeautifulDnd /> */}
+      <ExcelToArray />
     </div>
   );
 }
