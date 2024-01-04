@@ -18,6 +18,7 @@ import DragAndDop from './component/DragAndDrop/DragAndDop';
 import ReactBeautifulDnd from './component/DragAndDrop/ReactBeautifulDnd'
 import ExcelToArray from './component/ExcelToArray/ExcelToArray';
 import AdjustableSidebar from './component/AdjustableSidebar/AdjustableSidebar';
+import MouseLongPress from './component/mouseLongPress/MouseLongPress';
 
 function App() {
   return (
@@ -38,7 +39,8 @@ function App() {
       {/* <DragAndDop /> */}
       {/* <ReactBeautifulDnd /> */}
       {/* <ExcelToArray /> */}
-      <AdjustableSidebar />
+      {/* <AdjustableSidebar /> */}
+      <MouseLongPress />
     </div>
   );
 }
